@@ -94,7 +94,7 @@
                 table = $('#supportTable').DataTable({
                     ajax: {
                         type: "GET",
-                        url: "http://dragonsidesynergy-env.eba-rfrgjick.ap-southeast-2.elasticbeanstalk.com/currentadc",
+                        url: "https://dragonsidesynergy-env.eba-rfrgjick.ap-southeast-2.elasticbeanstalk.com/currentadc",
                         dataSrc: "supports",
                     },
                     columns: [
@@ -150,7 +150,7 @@
                 var info = { ChampID: id };
                 $.ajax({
                     type: "POST",
-                    url: "http://dragonsidesynergy-env.eba-rfrgjick.ap-southeast-2.elasticbeanstalk.com/adcid",
+                    url: "https://dragonsidesynergy-env.eba-rfrgjick.ap-southeast-2.elasticbeanstalk.com/adcid",
                     data: JSON.stringify(info),
                     contentType: "application/json;",
                     success: function (data) {
@@ -166,7 +166,7 @@
                 $.ajax({
 
                     type: "GET",
-                    url: "http://dragonsidesynergy-env.eba-rfrgjick.ap-southeast-2.elasticbeanstalk.com/currentadc",
+                    url: "https://dragonsidesynergy-env.eba-rfrgjick.ap-southeast-2.elasticbeanstalk.com/currentadc",
                     success: function (data) {
                         var response = JSON.parse(data);
                         var supports = response.supports;
@@ -194,7 +194,7 @@
             function getADCnames() {
                 $.ajax({
                     type: "GET",
-                    url: "http://dragonsidesynergy-env.eba-rfrgjick.ap-southeast-2.elasticbeanstalk.com/adcnames",
+                    url: "https://dragonsidesynergy-env.eba-rfrgjick.ap-southeast-2.elasticbeanstalk.com/adcnames",
                     success: function (data) {
                         var response = JSON.parse(data);
                         var adcs = response;
