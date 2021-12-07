@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="row border border-primary p-3 mb-2 bg-info text-white">
+        <h1>Dragonside Synergy Tool</h1>
+      </div>
+    </div>
+  </header>
+  <div class="container mt-3">
+    <div class="row">
+      <div class="col border border-primary">
+        <div class="row">
+          <div class="col">
+            <h3>ADC</h3>
+          </div>
+          <div class="col">
+
+            <input type="text" placeholder="Enter LoL username" id="userInput">
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="col mx-auto">
+            <div class="dropdown">
+              <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" name="recordinput">
+                Champion
+              </button>
+
+              <div id="champList" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Caitlyn</a>
+                <a class="dropdown-item" href="#">Miss Fortune</a>
+                <a class="dropdown-item" href="#">Tristana</a>
+                <a class="dropdown-item" href="#">Jhin</a>
+                <a class="dropdown-item" href="#">Ashe</a>
+              </div>
+            </div>
+          </div>
+          <button type="button" onclick="sendData()">Send</button>
+        </div>
+
+      </div>
+      <div class="col-7 border border-primary">
+        <div class="row row-cols-3">
+          <div class="col"></div>
+          <div class="col">
+            <h3>Support</h3>
+          </div>
+          <div class="col"></div>
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Games</th>
+              <th scope="col">Win Rate</th>
+            </tr>
+          </thead>
+          <tbody id="supports">
+            <tr>
+
+
+            </tr>
+            <tr>
+
+
+            </tr>
+            <tr>
+
+
+            </tr>
+          </tbody>
+        </table>
+        <div class="row row-cols-3">
+          <div class="col"></div>
+          <div class="col">
+            <img src="images/loading.gif" id="loadingImg" alt="">
+          </div>
+          <div class="col"></div>
+
+
+
+
+
+
+
+
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <script>
+      /*var url = "http://localhost:8080/support";
+      function loadDoc() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+             // Typical action to be performed when the document is ready:
+             var response = JSON.parse(xhttp.responseText);
+             var supports = response.list;
+  
+             var output = "";
+             for(var i = 0; i < supports.length; i++){
+                 let winRate = Math.round((supports[i].wins/supports[i].occurrences) * 100);
+                 output += '<tr>' + "</th>" + "<td>"+supports[i].name + '</td> <td>' + supports[i].occurrences + "</td> <td> "+ winRate + "%" + '</td> </tr>';
+             }
+             document.getElementById("supports").innerHTML = output;
+          }
+      };
+      xhttp.open("GET", url, true);
+      xhttp.send();
+      }
+  
+  
+      function send(){
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://localhost:8080/user/add", true);
+  
+        //Send the proper header information along with the request
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  
+        xhr.onreadystatechange = function() { // Call a function when the state changes.
+        
+        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+          // Request finished. Do processing here.
+            console.log("test");
+        }
+        }
+        xhr.send("Name=test");
+      
+      }
+      */
+      hideImage()
+      function showImage() {
+        var image = document.getElementById('loadingImg');
+        image.style.visibility = 'visible';
+      }
+      function hideImage() {
+        var image = document.getElementById('loadingImg');
+        image.style.visibility = 'collapse';
+      }
+
+
+      function getData() {
+        $.ajax({
+          type: "GET",
+          url: "http://localhost:8080/support",
+          success: function (data) {
+            data = JSON.stringify(data);
+            var response = JSON.parse(data);
+            var supports = response.list;
+            var output = "";
+            for (var i = 0; i < supports.length; i++) {
+              let winRate = Math.round((supports[i].wins / supports[i].occurrences) * 100);
+              output += '<tr>' + "</th>" + "<td>" + supports[i].name + '</td> <td>' + supports[i].occurrences + "</td> <td> " + winRate + "%" + '</td> </tr>';
+            }
+            document.getElementById("supports").innerHTML = output;
+          },
+          error: function (jqXHR, textStatus, errorThrown) {
+            alert(jqXHR.status);
+          },
+
+        });
+      }
+
+
+      var champion = ""
+      var userName = ""
+
+      function sendData() {
+        userName = document.getElementById("userInput").value;
+        var info =
+        {
+          UserName: userName,
+          Champion: champion
+        }
+        $.ajax({
+          beforeSend: showImage(),
+          type: "POST",
+          url: "http://localhost:8080/user/add",
+          data: JSON.stringify(info),
+          contentType: "application/json;",
+          success: function (data) {
+            hideImage();
+            getData();
+            console.log(data);
+            console.log(JSON.stringify(info));
+
+          },
+          error: function (jqXHR, textStatus, errorThrown) {
+            alert(jqXHR.status);
+            console.log("Error");
+          }
+        })
+
+
+      }
+      /*$('champList a').on('click', function () {
+        champion = val($(this).text());
+        console.log("The Champion selected is:" + champion);
+      });
+      */
+      $(".dropdown-menu a").click(function () {
+        var selText = $(this).text();
+        champion = $(this).text();
+        $(this).parents('.dropdown').find('.dropdown-toggle').html(selText + ' <span class="caret"></span>');
+
+        champion = champion.replace(/\s+/g, '');
+        console.log("The Champion selected is: " + champion);
+      });
+
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>

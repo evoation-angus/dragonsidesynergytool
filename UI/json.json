@@ -1,0 +1,411 @@
+{
+    "adclist": [
+        {
+            "name": "Ezreal",
+            "supports": [
+                {
+                    "name": "Yuumi",
+                    "occurences": 2,
+                    "wins": 1
+                }
+            ]
+        },
+        {
+            "name": "Kalista",
+            "supports": [
+                {
+                    "name": "Rakan",
+                    "occurences": 1,
+                    "wins": 1
+                }
+            ]
+        },
+        {
+            "name": "Jhin",
+            "supports": [
+                {
+                    "name": "Karma",
+                    "occurences": 2,
+                    "wins": 2
+                },
+                {
+                    "name": "Rakan",
+                    "occurences": 4,
+                    "wins": 2
+                },
+                {
+                    "name": "Thresh",
+                    "occurences": 2,
+                    "wins": 2
+                },
+                {
+                    "name": "Yuumi",
+                    "occurences": 2,
+                    "wins": 0
+                },
+                {
+                    "name": "Leona",
+                    "occurences": 2,
+                    "wins": 1
+                },
+                {
+                    "name": "Zilean",
+                    "occurences": 1,
+                    "wins": 0
+                },
+                {
+                    "name": "Sylas",
+                    "occurences": 1,
+                    "wins": 0
+                },
+                {
+                    "name": "Lux",
+                    "occurences": 3,
+                    "wins": 2
+                },
+                {
+                    "name": "Alistar",
+                    "occurences": 1,
+                    "wins": 0
+                },
+                {
+                    "name": "Bard",
+                    "occurences": 1,
+                    "wins": 1
+                }
+            ]
+        },
+        {
+            "name": "Lucian",
+            "supports": [
+                {
+                    "name": "Lulu",
+                    "occurences": 2,
+                    "wins": 1
+                },
+                {
+                    "name": "Nami",
+                    "occurences": 5,
+                    "wins": 2
+                },
+                {
+                    "name": "Rakan",
+                    "occurences": 1,
+                    "wins": 0
+                }
+            ]
+        },
+        {
+            "name": "Jinx",
+            "supports": [
+                {
+                    "name": "Thresh",
+                    "occurences": 3,
+                    "wins": 1
+                },
+                {
+                    "name": "Braum",
+                    "occurences": 1,
+                    "wins": 1
+                },
+                {
+                    "name": "Karma",
+                    "occurences": 1,
+                    "wins": 1
+                },
+                {
+                    "name": "Rakan",
+                    "occurences": 1,
+                    "wins": 1
+                },
+                {
+                    "name": "Yuumi",
+                    "occurences": 1,
+                    "wins": 1
+                }
+            ]
+        },
+        {
+            "name": "Aphelios",
+            "supports": [
+                {
+                    "name": "Lulu",
+                    "occurences": 3,
+                    "wins": 2
+                },
+                {
+                    "name": "Thresh",
+                    "occurences": 3,
+                    "wins": 3
+                },
+                {
+                    "name": "Rakan",
+                    "occurences": 2,
+                    "wins": 0
+                },
+                {
+                    "name": "Nautilus",
+                    "occurences": 1,
+                    "wins": 1
+                },
+                {
+                    "name": "Pyke",
+                    "occurences": 2,
+                    "wins": 1
+                },
+                {
+                    "name": "Gragas",
+                    "occurences": 1,
+                    "wins": 1
+                }
+            ]
+        },
+        {
+            "name": "Kaisa",
+            "supports": [
+                {
+                    "name": "Galio",
+                    "occurences": 1,
+                    "wins": 1
+                },
+                {
+                    "name": "Leona",
+                    "occurences": 1,
+                    "wins": 0
+                },
+                {
+                    "name": "Nautilus",
+                    "occurences": 1,
+                    "wins": 0
+                }
+            ]
+        },
+        {
+            "name": "Ziggs",
+            "supports": [
+                {
+                    "name": "Bard",
+                    "occurences": 2,
+                    "wins": 1
+                },
+                {
+                    "name": "Rakan",
+                    "occurences": 1,
+                    "wins": 0
+                },
+                {
+                    "name": "Leona",
+                    "occurences": 1,
+                    "wins": 0
+                },
+                {
+                    "name": "Rell",
+                    "occurences": 1,
+                    "wins": 1
+                },
+                {
+                    "name": "Pyke",
+                    "occurences": 1,
+                    "wins": 0
+                }
+            ]
+        },
+        {
+            "name": "Twitch",
+            "supports": [
+                {
+                    "name": "JarvanIV",
+                    "occurences": 1,
+                    "wins": 0
+                }
+            ]
+        },
+        {
+            "name": "Xayah",
+            "supports": [
+                {
+                    "name": "Yuumi",
+                    "occurences": 1,
+                    "wins": 1
+                },
+                {
+                    "name": "Gragas",
+                    "occurences": 1,
+                    "wins": 1
+                },
+                {
+                    "name": "Rakan",
+                    "occurences": 2,
+                    "wins": 0
+                }
+            ]
+        },
+        {
+            "name": "Samira",
+            "supports": [
+                {
+                    "name": "Pyke",
+                    "occurences": 1,
+                    "wins": 0
+                },
+                {
+                    "name": "Rell",
+                    "occurences": 1,
+                    "wins": 1
+                }
+            ]
+        },
+        {
+            "name": "Xerath",
+            "supports": [
+                {
+                    "name": "Galio",
+                    "occurences": 1,
+                    "wins": 0
+                },
+                {
+                    "name": "Rakan",
+                    "occurences": 1,
+                    "wins": 0
+                }
+            ]
+        },
+        {
+            "name": "MissFortune",
+            "supports": [
+                {
+                    "name": "Leona",
+                    "occurences": 1,
+                    "wins": 1
+                },
+                {
+                    "name": "Rakan",
+                    "occurences": 1,
+                    "wins": 0
+                },
+                {
+                    "name": "Yuumi",
+                    "occurences": 1,
+                    "wins": 0
+                }
+            ]
+        },
+        {
+            "name": "Caitlyn",
+            "supports": [
+                {
+                    "name": "Nami",
+                    "occurences": 1,
+                    "wins": 1
+                },
+                {
+                    "name": "Lux",
+                    "occurences": 2,
+                    "wins": 1
+                },
+                {
+                    "name": "Morgana",
+                    "occurences": 1,
+                    "wins": 0
+                }
+            ]
+        },
+        {
+            "name": "KogMaw",
+            "supports": [
+                {
+                    "name": "Lulu",
+                    "occurences": 1,
+                    "wins": 0
+                }
+            ]
+        },
+        {
+            "name": "Draven",
+            "supports": [
+                {
+                    "name": "Rakan",
+                    "occurences": 1,
+                    "wins": 1
+                },
+                {
+                    "name": "Leona",
+                    "occurences": 1,
+                    "wins": 1
+                }
+            ]
+        },
+        {
+            "name": "Syndra",
+            "supports": [
+                {
+                    "name": "Bard",
+                    "occurences": 1,
+                    "wins": 1
+                }
+            ]
+        },
+        {
+            "name": "Ashe",
+            "supports": [
+                {
+                    "name": "Lulu",
+                    "occurences": 1,
+                    "wins": 0
+                }
+            ]
+        },
+        {
+            "name": "Orianna",
+            "supports": [
+                {
+                    "name": "Leona",
+                    "occurences": 1,
+                    "wins": 0
+                }
+            ]
+        }
+    ],
+    "matchids": [
+        "KR_5554460293",
+        "KR_5551290258",
+        "KR_5556866703",
+        "KR_5556247129",
+        "KR_5555006890",
+        "KR_5553416681",
+        "KR_5553063480",
+        "KR_5557272139",
+        "KR_5556941908",
+        "KR_5556045374",
+        "KR_5557280912",
+        "KR_5557117103",
+        "KR_5556908564",
+        "KR_5554283960",
+        "KR_5554184019",
+        "KR_5557227130",
+        "KR_5554298825",
+        "KR_5556393742",
+        "KR_5556189585",
+        "KR_5556339738",
+        "KR_5557202231",
+        "KR_5554234835",
+        "KR_5556465796",
+        "KR_5554737798",
+        "KR_5556855357",
+        "KR_5557097356",
+        "KR_5557132305",
+        "KR_5557095532",
+        "KR_5553503247",
+        "KR_5554248303",
+        "KR_5554166744",
+        "KR_5557176564",
+        "KR_5554546548",
+        "KR_5557255656",
+        "KR_5556977676",
+        "KR_5554529181",
+        "KR_5556171712",
+        "KR_5556957480",
+        "KR_5548934735",
+        "KR_5555092731"
+    ]
+}

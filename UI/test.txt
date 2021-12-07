@@ -1,0 +1,204 @@
+{
+    "id": 202,
+    "name": "Jhin",
+    "supports": [
+        {
+            "id": 1596,
+            "name": "Galio",
+            "occurences": 10,
+            "wins": 6
+        },
+        {
+            "id": 1597,
+            "name": "Rakan",
+            "occurences": 54,
+            "wins": 25
+        },
+        {
+            "id": 1598,
+            "name": "Taric",
+            "occurences": 3,
+            "wins": 2
+        },
+        {
+            "id": 1599,
+            "name": "Pyke",
+            "occurences": 16,
+            "wins": 9
+        },
+        {
+            "id": 1600,
+            "name": "Karma",
+            "occurences": 31,
+            "wins": 17
+        },
+        {
+            "id": 1601,
+            "name": "Leona",
+            "occurences": 40,
+            "wins": 22
+        },
+        {
+            "id": 1602,
+            "name": "Braum",
+            "occurences": 4,
+            "wins": 2
+        },
+        {
+            "id": 1603,
+            "name": "Rumble",
+            "occurences": 2,
+            "wins": 1
+        },
+        {
+            "id": 1604,
+            "name": "Thresh",
+            "occurences": 9,
+            "wins": 3
+        },
+        {
+            "id": 1605,
+            "name": "Gragas",
+            "occurences": 11,
+            "wins": 4
+        },
+        {
+            "id": 1606,
+            "name": "Lux",
+            "occurences": 8,
+            "wins": 5
+        },
+        {
+            "id": 1607,
+            "name": "Blitzcrank",
+            "occurences": 10,
+            "wins": 7
+        },
+        {
+            "id": 1608,
+            "name": "Trundle",
+            "occurences": 3,
+            "wins": 1
+        },
+        {
+            "id": 1609,
+            "name": "Alistar",
+            "occurences": 12,
+            "wins": 5
+        },
+        {
+            "id": 1610,
+            "name": "Nautilus",
+            "occurences": 9,
+            "wins": 5
+        },
+        {
+            "id": 1611,
+            "name": "Yuumi",
+            "occurences": 12,
+            "wins": 4
+        },
+        {
+            "id": 1612,
+            "name": "Xerath",
+            "occurences": 6,
+            "wins": 1
+        },
+        {
+            "id": 1613,
+            "name": "Rell",
+            "occurences": 3,
+            "wins": 1
+        },
+        {
+            "id": 1614,
+            "name": "Maokai",
+            "occurences": 13,
+            "wins": 9
+        },
+        {
+            "id": 1615,
+            "name": "Lulu",
+            "occurences": 5,
+            "wins": 0
+        },
+        {
+            "id": 1616,
+            "name": "JarvanIV",
+            "occurences": 2,
+            "wins": 1
+        },
+        {
+            "id": 1617,
+            "name": "DrMundo",
+            "occurences": 2,
+            "wins": 1
+        },
+        {
+            "id": 1618,
+            "name": "Sejuani",
+            "occurences": 1,
+            "wins": 0
+        },
+        {
+            "id": 1619,
+            "name": "Chogath",
+            "occurences": 1,
+            "wins": 1
+        },
+        {
+            "id": 1620,
+            "name": "Sylas",
+            "occurences": 1,
+            "wins": 0
+        },
+        {
+            "id": 1621,
+            "name": "Zyra",
+            "occurences": 4,
+            "wins": 3
+        },
+        {
+            "id": 1622,
+            "name": "Shen",
+            "occurences": 3,
+            "wins": 1
+        },
+        {
+            "id": 1623,
+            "name": "Zilean",
+            "occurences": 5,
+            "wins": 1
+        },
+        {
+            "id": 1624,
+            "name": "Senna",
+            "occurences": 1,
+            "wins": 0
+        },
+        {
+            "id": 1625,
+            "name": "Zac",
+            "occurences": 1,
+            "wins": 1
+        },
+        {
+            "id": 1626,
+            "name": "Neeko",
+            "occurences": 4,
+            "wins": 1
+        },
+        {
+            "id": 1627,
+            "name": "Bard",
+            "occurences": 2,
+            "wins": 0
+        },
+        {
+            "id": 1628,
+            "name": "Veigar",
+            "occurences": 1,
+            "wins": 1
+        }
+    ]
+}
