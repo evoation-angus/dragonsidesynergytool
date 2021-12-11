@@ -17,8 +17,9 @@
 <body>
     <header>
         <div class="container">
-            <div class="row border border-primary p-3 mb-2 bg-info text-white">
-                <h1>Dragonside Synergy Tool</h1>
+            <div class="row border-primary p-5 mb-2 bg-info text-white"
+                style="background-image: url(images/hexandchemDragons3.jpg); background-position: center 33%;">
+                <h1 style="text-shadow: 2px 2px 4px black; ">Dragonside Synergy Tool</h1>
             </div>
         </div>
     </header>
@@ -32,21 +33,135 @@
                 </div>
                 <div class="row">
                     <div class="col mx-auto">
-                        <div class="dropdown">
-                            <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="recordinput">
-                                Champion
-                            </button>
 
-                            <div id="champList" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-
+                        <h4>Common ADCs:</h4>
+                        <div class="row">
+                            <div class="col-sm">
+                                <img src="images/Aphelios.png" alt="" class="img-fluid champImg"
+                                    onclick="championSelect(this)" id="523">
+                                <p>Aphelios</p>
+                            </div>
+                            <div class="col-sm">
+                                <img src="images/Ashe.png" alt="" class="img-fluid" onclick="championSelect(this)"
+                                    id="22">
+                                <p>Ashe</p>
+                            </div>
+                            <div class="col-sm">
+                                <img src="images/Caitlyn.png" alt="" class="img-fluid" onclick="championSelect(this)"
+                                    id="51">
+                                <p>Caitlyn</p>
+                            </div>
+                            <div class="col-sm">
+                                <img src="images/Draven.png" alt="" class="img-fluid" onclick="championSelect(this)"
+                                    id="119">
+                                <p>Draven</p>
+                            </div>
+                            <div class="col-sm">
+                                <img src="images/Ezreal.png" alt="" class="img-fluid" onclick="championSelect(this)"
+                                    id="81">
+                                <p>Ezreal</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm">
+                                <img src="images/Jhin.png" alt="" class="img-fluid" onclick="championSelect(this)"
+                                    id="202">
+                                <p>Jhin</p>
+                            </div>
+                            <div class="col-sm">
+                                <img src="images/Jinx.png" alt="" class="img-fluid" onclick="championSelect(this)"
+                                    id="222">
+                                <p>Jinx</p>
+                            </div>
+                            <div class="col-sm">
+                                <img src="images/Kaisa.png" alt="" class="img-fluid" onclick="championSelect(this)"
+                                    id="145">
+                                <p>Kai'Sa</p>
+                            </div>
+                            <div class="col-sm">
+                                <img src="images/Kalista.png" alt="" class="img-fluid" onclick="championSelect(this)"
+                                    id="429">
+                                <p>Kalista</p>
+                            </div>
+                            <div class="col-sm">
+                                <img src="images/Kindred.png" alt="" class="img-fluid" onclick="championSelect(this)"
+                                    id="203">
+                                <p>Kindred</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm">
+                                <img src="images/KogMaw.png" alt="" class="img-fluid" onclick="championSelect(this)"
+                                    id="96">
+                                <p>Kog'Maw</p>
+                            </div>
+                            <div class="col-sm">
+                                <img src="images/Lucian.png" alt="" class="img-fluid" onclick="championSelect(this)"
+                                    id="236">
+                                <p>Lucian</p>
+                            </div>
+                            <div class="col-sm">
+                                <img src="images/MissFortune.png" alt="" class="img-fluid"
+                                    onclick="championSelect(this)" id="21">
+                                <p>Miss Fortune</p>
+                            </div>
+                            <div class="col-sm">
+                                <img src="images/Samira.png" alt="" class="img-fluid" onclick="championSelect(this)"
+                                    id="360">
+                                <p>Samira</p>
+                            </div>
+                            <div class="col-sm">
+                                <img src="images/Twitch.png" alt="" class="img-fluid" onclick="championSelect(this)"
+                                    id="29">
+                                <p>Twitch</p>
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <h2 id="adc"></h2>
-                <img id="adcIcon" src="">
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-block" type="button" data-toggle="collapse"
+                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Off Meta ADCs
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                            data-parent="#accordionExample">
+                            <div class="row">
+                                <div class="col-sm">
+                                    <img src="images/KogMaw.png" alt="" class="img-fluid" onclick="championSelect(this)"
+                                        id="96">
+                                    <p>Kog'Maw</p>
+                                </div>
+                                <div class="col-sm">
+                                    <img src="images/Lucian.png" alt="" class="img-fluid" onclick="championSelect(this)"
+                                        id="236">
+                                    <p>Lucian</p>
+                                </div>
+                                <div class="col-sm">
+                                    <img src="images/MissFortune.png" alt="" class="img-fluid"
+                                        onclick="championSelect(this)" id="21">
+                                    <p>Miss Fortune</p>
+                                </div>
+                                <div class="col-sm">
+                                    <img src="images/Samira.png" alt="" class="img-fluid" onclick="championSelect(this)"
+                                        id="360">
+                                    <p>Samira</p>
+                                </div>
+                                <div class="col-sm">
+                                    <img src="images/Twitch.png" alt="" class="img-fluid" onclick="championSelect(this)"
+                                        id="29">
+                                    <p>Twitch</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <div class="col-7 border border-primary">
                 <div class="row row-cols-3">
@@ -133,15 +248,19 @@
                 table.rows(indexes).remove().draw();
             }
 
-
+            var previousElement = null;
             function championSelect(element) {
+                if (previousElement != null) {
+                    previousElement.style.boxShadow = "none";
+                }
+                previousElement = element;
                 var name = element.innerHTML;
-                var iconurl = "https://ddragon.leagueoflegends.com/cdn/11.22.1/img/champion/" + name + ".png";
+                //var iconurl = "https://ddragon.leagueoflegends.com/cdn/11.22.1/img/champion/" + name + ".png";
                 document.getElementById("adc").innerHTML = name;
-                document.getElementById("adcIcon").src = iconurl;
+                //document.getElementById("adcIcon").src = iconurl;
                 console.log(name);
                 var id = element.id;
-
+                element.style.boxShadow = "0 0 0 3px red";
                 sendADCID(id);
                 //document.getElementById("supports").innerHTML = championIDtable[id];
             }
