@@ -1,0 +1,7 @@
+:root {
+    --some-border-style: 2px solid red;
+}
+
+.champImg {
+    border-style: var(--some-border-style);
+}
