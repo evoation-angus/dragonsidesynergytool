@@ -17,16 +17,16 @@
 
 <body>
     <header>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row border-primary p-5 mb-2 bg-info text-white"
                 style="background-image: url(images/hexandchemDragons3.jpg); background-position: center 33%;">
                 <h1 style="text-shadow: 2px 2px 4px black; ">Dragonside Synergy Tool</h1>
             </div>
         </div>
     </header>
-    <div class="container mt-3">
+    <div class="container-fluid mt-3">
         <div class="row">
-            <div class="col border border-primary">
+            <div class="col-6 border border-primary">
                 <div class="row">
                     <div class="col">
                         <h3>ADC</h3>
@@ -61,8 +61,8 @@
                                     id="81">
                                 <p>Ezreal</p>
                             </div>
-                        
-                        
+
+
                             <div class="col-sm">
                                 <img src="images/Jhin.png" alt="" class="img-fluid" onclick="championSelect(this)"
                                     id="202">
@@ -87,7 +87,7 @@
                                 <img src="images/Kindred.png" alt="" class="img-fluid" onclick="championSelect(this)"
                                     id="203">
                                 <p>Kindred</p>
-                            </div>       
+                            </div>
                             <div class="col-sm">
                                 <img src="images/KogMaw.png" alt="" class="img-fluid" onclick="championSelect(this)"
                                     id="96">
@@ -126,9 +126,10 @@
                                 </button>
                             </h2>
                         </div>
-                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                            <div class="card-body" >
-                                <div  class="col mx-auto">
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="col mx-auto">
                                     <div id="champList" class="row row-cols-2 row-cols-sm-4 row-cols-md-5">
 
                                     </div>
@@ -159,13 +160,6 @@
 
                     </tbody>
                 </table>
-                <div class="row row-cols-3">
-                    <div class="col"></div>
-                    <div class="col">
-
-                    </div>
-                    <div class="col"></div>
-                </div>
             </div>
         </div>
 
@@ -202,11 +196,10 @@
                         }
                     ],
                     order: [[1, "desc"]],
-                    "rowCallback": function (row, data, index) {
-                        if (data[1] === null) {
-                            $(row).remove();
-                        }
-                    }
+                    rowReorder: {
+                        selector: 'td:nth-child(2)'
+                    },
+                    responsive: true
 
                 });
 
@@ -296,12 +289,12 @@
                         var adcs = response;
                         var output = "";
                         for (var i = 0; i < adcs.length; i += 2) {
-                            
+
                             var name = adcs[i];
                             var champID = adcs[i + 1];
                             var champIcon = "https://ddragon.leagueoflegends.com/cdn/11.22.1/img/champion/" + name + ".png";
                             output += '<div class="col-sm"><img src="' + champIcon + '" alt="" class="img-fluid" onclick="championSelect(this)"id="' + champID + '"' + "><p>" + name + "</p></div>"
-                            
+
                             //output += '<a class="dropdown-item"' + 'id="' + champID + '" ' + 'onclick="championSelect(this)"' + '>' + name + '</a>';
                         }
                         document.getElementById("champList").innerHTML = output;
