@@ -7,12 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="DataTables-1.11.3/css/jquery.dataTables.css"/>
+    <link rel="stylesheet" type="text/css" href="DataTables-1.11.3/css/jquery.dataTables.css" />
     <link rel="stylesheet" type="text/css" href="DataTables-1.11.3/css/responsive.dataTables.css"/>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
-
-    <title>Document</title>
+    <title>Dragonside</title>
 </head>
 
 <body>
@@ -35,7 +34,7 @@
                 <div class="row">
                     <div class="col">
                         <h4>Common ADCs:</h4>
-                        <div class="row row-cols-3 row-cols-xs-2 row-cols-sm-3 row-cols-md-3 row-cols-lg-5">
+                        <div class="row row-cols-2 row-cols-xs-2 row-cols-sm-3 row-cols-md-3 row-cols-lg-5">
                             <div class="col-sm">
                                 <img src="images/Aphelios.png" alt="" class="img-fluid champImg"
                                     onclick="championSelect(this)" id="523" name="Aphelios">
@@ -130,7 +129,8 @@
                             data-parent="#accordionExample">
                             <div class="card-body">
                                 <div class="col mx-auto">
-                                    <div id="champList" class="row row-cols-2 row-cols-sm-4 row-cols-md-3 row-cols-lg-6" style="font-size:small;">
+                                    <div id="champList" class="row row-cols-2 row-cols-sm-4 row-cols-md-3 row-cols-lg-6"
+                                        style="font-size:small;">
 
                                     </div>
                                 </div>
@@ -199,23 +199,16 @@
                     rowReorder: {
                         selector: 'td:nth-child(2)'
                     },
-                    responsive: true
-
-                });
-
-                counter++;
-                filterRows();
-            };
-            function filterRows() {
-                var indexes = table
-                    .rows()
-                    .indexes()
-                    .filter(function (value, index) {
-                        return 'Leona' === table.row(value).data()[0];
+                    responsive: true,
+                    language: {
+                        searchPlaceholder: "Search",
+                        search: ""
+                    },
+                    
                     });
-
-                table.rows(indexes).remove().draw();
-            }
+                counter++;
+                document.getElementById("supportTable").style.visibility = "visible" 
+            };
 
             var previousElement = null;
             function championSelect(element) {
@@ -224,9 +217,6 @@
                 }
                 previousElement = element;
                 var name = element.name;
-                //var iconurl = "https://ddragon.leagueoflegends.com/cdn/11.22.1/img/champion/" + name + ".png";
-                //document.getElementById("adc").innerHTML = name;
-                //document.getElementById("adcIcon").src = iconurl;
                 console.log(name);
                 var id = element.id;
                 element.style.boxShadow = "0 0 0 3px red";
@@ -235,8 +225,8 @@
                 console.log(output);
                 document.getElementById("selected").innerHTML = output;
                 
-                //document.getElementById("supports").innerHTML = championIDtable[id];
             }
+
 
             function sendADCID(id) {
                 var info = { ChampID: id };
@@ -284,6 +274,7 @@
             }
 
             function getADCnames() {
+                document.getElementById("supportTable").style.visibility = "hidden" 
                 $.ajax({
                     type: "GET",
                     url: "http://dragonsidesynergy-env.eba-rfrgjick.ap-southeast-2.elasticbeanstalk.com/adcnames",
@@ -295,13 +286,13 @@
                         for (var i = 0; i < adcs.length; i += 2) {
 
                             var name = adcs[i];
-                            
+
                             var champID = adcs[i + 1];
                             var champIcon = "https://ddragon.leagueoflegends.com/cdn/11.22.1/img/champion/" + name + ".png";
-                            if(name == "MonkeyKing"){
+                            if (name == "MonkeyKing") {
                                 name = "Wukong"
                             }
-                            output += '<div class="col-sm"><img src="' + champIcon + '" alt="" class="img-fluid" onclick="championSelect(this)"id="' + champID + '"' + ' name="'+ name +'"><p>' + name + "</p></div>"
+                            output += '<div class="col-sm"><img src="' + champIcon + '" alt="" class="img-fluid" onclick="championSelect(this)"id="' + champID + '"' + ' name="' + name + '"><p>' + name + "</p></div>"
                             //output += '<a class="dropdown-item"' + 'id="' + champID + '" ' + 'onclick="championSelect(this)"' + '>' + name + '</a>';
                         }
                         document.getElementById("champList").innerHTML = output;
