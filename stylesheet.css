@@ -1,0 +1,32 @@
+.dataTables_wrapper .dataTables_filter input {
+    width:70%;
+}
+h3{
+    font-size:medium; 
+    text-align: center;
+}
+.table thead th{
+    padding: 0%;
+}
+@media (min-width: 576px) { 
+    .dataTables_wrapper .dataTables_filter input {
+        width:70%;  
+    }
+    h3{
+        font-size:1.75rem; 
+        text-align: center; 
+     }
+}
+
+
+@media (min-width: 992px) { 
+    .dataTables_wrapper .dataTables_filter input {
+        width:100%;
+    }
+    h3{
+        font-size:1.75rem;
+        text-align: center; 
+     }
+    
+
+ }
