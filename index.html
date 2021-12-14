@@ -38,79 +38,79 @@
                         <div class="row row-cols-3 row-cols-xs-2 row-cols-sm-3 row-cols-md-3 row-cols-lg-5">
                             <div class="col-sm">
                                 <img src="images/Aphelios.png" alt="" class="img-fluid champImg"
-                                    onclick="championSelect(this)" id="523">
+                                    onclick="championSelect(this)" id="523" name="Aphelios">
                                 <p>Aphelios</p>
                             </div>
                             <div class="col-sm">
                                 <img src="images/Ashe.png" alt="" class="img-fluid" onclick="championSelect(this)"
-                                    id="22">
+                                    id="22" name="Ashe">
                                 <p>Ashe</p>
                             </div>
                             <div class="col-sm">
                                 <img src="images/Caitlyn.png" alt="" class="img-fluid" onclick="championSelect(this)"
-                                    id="51">
+                                    id="51" name="Caitlyn">
                                 <p>Caitlyn</p>
                             </div>
                             <div class="col-sm">
                                 <img src="images/Draven.png" alt="" class="img-fluid" onclick="championSelect(this)"
-                                    id="119">
+                                    id="119" name="Draven">
                                 <p>Draven</p>
                             </div>
                             <div class="col-sm">
                                 <img src="images/Ezreal.png" alt="" class="img-fluid" onclick="championSelect(this)"
-                                    id="81">
+                                    id="81" name="Ezreal">
                                 <p>Ezreal</p>
                             </div>
 
 
                             <div class="col-sm">
                                 <img src="images/Jhin.png" alt="" class="img-fluid" onclick="championSelect(this)"
-                                    id="202">
+                                    id="202" name="Jhin">
                                 <p>Jhin</p>
                             </div>
                             <div class="col-sm">
                                 <img src="images/Jinx.png" alt="" class="img-fluid" onclick="championSelect(this)"
-                                    id="222">
+                                    id="222" name="Jinx">
                                 <p>Jinx</p>
                             </div>
                             <div class="col-sm">
                                 <img src="images/Kaisa.png" alt="" class="img-fluid" onclick="championSelect(this)"
-                                    id="145">
+                                    id="145" name="Kai'Sa">
                                 <p>Kai'Sa</p>
                             </div>
                             <div class="col-sm">
                                 <img src="images/Kalista.png" alt="" class="img-fluid" onclick="championSelect(this)"
-                                    id="429">
+                                    id="429" name="Kalista">
                                 <p>Kalista</p>
                             </div>
                             <div class="col-sm">
                                 <img src="images/Kindred.png" alt="" class="img-fluid" onclick="championSelect(this)"
-                                    id="203">
+                                    id="203" name="Kindred">
                                 <p>Kindred</p>
                             </div>
                             <div class="col-sm">
                                 <img src="images/KogMaw.png" alt="" class="img-fluid" onclick="championSelect(this)"
-                                    id="96">
+                                    id="96" name="Kog'Maw">
                                 <p>Kog'Maw</p>
                             </div>
                             <div class="col-sm">
                                 <img src="images/Lucian.png" alt="" class="img-fluid" onclick="championSelect(this)"
-                                    id="236">
+                                    id="236" name="Lucian">
                                 <p>Lucian</p>
                             </div>
                             <div class="col-sm">
                                 <img src="images/MissFortune.png" alt="" class="img-fluid"
-                                    onclick="championSelect(this)" id="21">
+                                    onclick="championSelect(this)" id="21" name="Miss Fortune">
                                 <p>Miss Fortune</p>
                             </div>
                             <div class="col-sm">
                                 <img src="images/Samira.png" alt="" class="img-fluid" onclick="championSelect(this)"
-                                    id="360">
+                                    id="360" name="Samira">
                                 <p>Samira</p>
                             </div>
                             <div class="col-sm">
                                 <img src="images/Twitch.png" alt="" class="img-fluid" onclick="championSelect(this)"
-                                    id="29">
+                                    id="29" name="Twitch">
                                 <p>Twitch</p>
                             </div>
                         </div>
@@ -142,11 +142,11 @@
             </div>
             <div class="col-6 border border-primary">
                 <div class="row row-cols-3">
-                    <div class="col"></div>
-                    <div class="col">
-                        <h3>Currently Selected: </h3>
+                    <div class="col-3"></div>
+                    <div class="col-6">
+                        <h3 id="selected" style="text-align: center;">Currently Selected: None</h3>
                     </div>
-                    <div class="col"></div>
+                    <div class="col-3"></div>
                 </div>
                 <table class="table" id="supportTable">
                     <thead>
@@ -223,7 +223,7 @@
                     previousElement.style.boxShadow = "none";
                 }
                 previousElement = element;
-                var name = element.innerHTML;
+                var name = element.name;
                 //var iconurl = "https://ddragon.leagueoflegends.com/cdn/11.22.1/img/champion/" + name + ".png";
                 //document.getElementById("adc").innerHTML = name;
                 //document.getElementById("adcIcon").src = iconurl;
@@ -231,6 +231,10 @@
                 var id = element.id;
                 element.style.boxShadow = "0 0 0 3px red";
                 sendADCID(id);
+                var output = "Currently Selected: " + name
+                console.log(output);
+                document.getElementById("selected").innerHTML = output;
+                
                 //document.getElementById("supports").innerHTML = championIDtable[id];
             }
 
@@ -297,7 +301,7 @@
                             if(name == "MonkeyKing"){
                                 name = "Wukong"
                             }
-                            output += '<div class="col-sm"><img src="' + champIcon + '" alt="" class="img-fluid" onclick="championSelect(this)"id="' + champID + '"' + "><p>" + name + "</p></div>"
+                            output += '<div class="col-sm"><img src="' + champIcon + '" alt="" class="img-fluid" onclick="championSelect(this)"id="' + champID + '"' + ' name="'+ name +'"><p>' + name + "</p></div>"
                             //output += '<a class="dropdown-item"' + 'id="' + champID + '" ' + 'onclick="championSelect(this)"' + '>' + name + '</a>';
                         }
                         document.getElementById("champList").innerHTML = output;
