@@ -1,3 +1,43 @@
+body{
+    background-color: #060E1F;
+    color:antiquewhite
+}
+.card{
+    background-color: #092949;
+}
+.btn{
+    color:antiquewhite
+}
+
+table.dataTable tbody tr{
+    background-color: #092949;
+    color: antiquewhite;
+}
+th{
+    color:antiquewhite;
+}
+label{
+    color: antiquewhite;
+}
+#supportTable_length > label > select{
+    color: antiquewhite;
+    background-color: #092949;
+}
+.table th{
+    border-color:#C9AA71;
+}
+.table td{
+    border-top-color:#C9AA71 ;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    color: antiquewhite!important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled{
+    color: rgb(145, 136, 124)!important;
+}
+.dataTables_info{
+    color: antiquewhite!important;
+}
 .dataTables_wrapper .dataTables_filter input {
     width:70%;
 }
