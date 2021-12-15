@@ -8,7 +8,9 @@ body{
 .btn{
     color:antiquewhite
 }
-
+#supportTable_filter > label > input[type=search]{
+    color:antiquewhite
+}
 table.dataTable tbody tr{
     background-color: #092949;
     color: antiquewhite;
