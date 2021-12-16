@@ -2,6 +2,16 @@ body{
     background-color: #060E1F;
     color:antiquewhite
 }
+#leftCol{
+    border-right: #060E1F solid 5px; 
+    border-bottom: #060E1F solid 16px;
+    border-left: #060E1F solid 10px;
+}
+#rightCol{
+    border-left: #060E1F solid 5px; 
+    border-bottom: #060E1F solid 16px;
+    border-right: #060E1F solid 10px;
+}
 .card{
     background-color: #092949;
 }
@@ -24,6 +34,13 @@ label{
 #supportTable_length > label > select{
     color: antiquewhite;
     background-color: #092949;
+}
+.accordion{
+    width: 100%; 
+    margin: 0;
+}
+.btn:hover{
+    color: rgb(145, 136, 124);
 }
 .table th{
     border-color:#C9AA71;
@@ -50,6 +67,9 @@ h3{
 .table thead th{
     padding: 0%;
 }
+.card-body{
+    padding: 0;
+}
 @media (min-width: 576px) { 
     .dataTables_wrapper .dataTables_filter input {
         width:70%;  
@@ -57,7 +77,11 @@ h3{
     h3{
         font-size:1.75rem; 
         text-align: center; 
-     }
+    }
+    .accordion{
+        width: 100%; 
+        margin: 10px;
+    }
 }
 
 
