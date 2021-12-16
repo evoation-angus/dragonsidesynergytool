@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="DataTables-1.11.3/css/jquery.dataTables.css" />
-    <link rel="stylesheet" type="text/css" href="DataTables-1.11.3/css/responsive.dataTables.css"/>
-    <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+    <link rel="stylesheet" type="text/css" href="DataTables-1.11.3/css/responsive.dataTables.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <title>Dragonside</title>
 </head>
@@ -25,7 +25,7 @@
     </header>
     <div class="container-xl mt-3" style="background-color: #061E36">
         <div class="row">
-            <div class="col-6" style="border-right: solid; border-right-color: #060E1F; border-width:5px;">
+            <div class="col-6" id="leftCol">
                 <div class="row">
                     <div class="col">
                         <h3>ADC</h3>
@@ -115,23 +115,26 @@
                         </div>
                     </div>
                 </div>
-                <div class="accordion" id="accordionExample">
-                    <div class="card">
-                        <div class="card-header" id="headingOne">
-                            <h2 class="mb-0">
-                                <button class="btn btn-block" type="button" data-toggle="collapse"
-                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Off Meta ADCs
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
-                            data-parent="#accordionExample">
-                            <div class="card-body">
-                                <div class="col mx-auto">
-                                    <div id="champList" class="row row-cols-2 row-cols-sm-4 row-cols-md-3 row-cols-lg-6"
-                                        style="font-size:small;">
+                <div class="row">
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-block" type="button" data-toggle="collapse"
+                                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Off Meta ADCs
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <div class="col mx-auto">
+                                        <div id="champList"
+                                            class="row row-cols-2 row-cols-sm-4 row-cols-md-3 row-cols-lg-6"
+                                            style="font-size:small;">
 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -141,7 +144,7 @@
 
             </div>
 
-            <div class="col-6" style="border-left: solid; border-left-color: #060E1F; border-width:5px;">
+            <div class="col-6" id="rightCol">
                 <div class="row row-cols-3">
                     <div class="col-3"></div>
                     <div class="col-6">
@@ -205,10 +208,10 @@
                         searchPlaceholder: "Search",
                         search: ""
                     },
-                    
-                    });
+
+                });
                 counter++;
-                document.getElementById("supportTable").style.visibility = "visible" 
+                document.getElementById("supportTable").style.visibility = "visible"
             };
 
             var previousElement = null;
@@ -225,7 +228,7 @@
                 var output = "Currently Selected: " + name
                 console.log(output);
                 document.getElementById("selected").innerHTML = output;
-                
+
             }
 
 
@@ -275,7 +278,7 @@
             }
 
             function getADCnames() {
-                document.getElementById("supportTable").style.visibility = "hidden" 
+                document.getElementById("supportTable").style.visibility = "hidden"
                 $.ajax({
                     type: "GET",
                     url: "http://dragonsidesynergy-env.eba-rfrgjick.ap-southeast-2.elasticbeanstalk.com/adcnames",
