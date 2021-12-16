@@ -296,7 +296,7 @@
                             if (name == "MonkeyKing") {
                                 name = "Wukong"
                             }
-                            output += '<div class="col-sm"><img src="' + champIcon + '" alt="" class="img-fluid" onclick="championSelect(this)"id="' + champID + '"' + ' name="' + name + '"><p>' + name + "</p></div>"
+                            output += '<div class="col-sm"><a href="#selected"><img src="' + champIcon + '" alt="" class="img-fluid" onclick="championSelect(this)"id="' + champID + '"' + ' name="' + name + '"></a><p>' + name + "</p></div>"
                             //output += '<a class="dropdown-item"' + 'id="' + champID + '" ' + 'onclick="championSelect(this)"' + '>' + name + '</a>';
                         }
                         document.getElementById("champList").innerHTML = output;
