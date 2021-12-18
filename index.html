@@ -26,14 +26,14 @@
     <div class="container-xl mt-3" style="background-color: #061E36">
         <div class="row">
             <div class="col-6" id="leftCol">
-                <div class="row">
+                <div class="row" style="background-color: #092649;  margin-bottom: 10px;">
                     <div class="col">
-                        <h3>ADC</h3>
+                        <h3>Common ADCs:</h3>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <h4>Common ADCs:</h4>
+                        
                         <div class="row row-cols-2 row-cols-xs-2 row-cols-sm-3 row-cols-md-3 row-cols-lg-5">
                             <div class="col-sm">
                                 <img src="images/Aphelios.png" alt="" class="img-fluid champImg"
@@ -145,12 +145,10 @@
             </div>
 
             <div class="col-6" id="rightCol">
-                <div class="row row-cols-3">
-                    <div class="col-3"></div>
-                    <div class="col-6">
-                        <h3 id="selected" style="text-align: center;">Currently Selected: None</h3>
+                <div class="row " style="background-color: #092649; margin-bottom: 10px; ">
+                    <div class="col">
+                        <h3 id="selected" style="text-align: center;">Selected: None</h3>
                     </div>
-                    <div class="col-3"></div>
                 </div>
                 <table class="table" id="supportTable">
                     <thead>
@@ -223,9 +221,9 @@
                 var name = element.name;
                 console.log(name);
                 var id = element.id;
-                element.style.boxShadow = "0 0 0 3px red";
+                element.style.boxShadow = "0 0 0 3px #C9AA71";
                 sendADCID(id);
-                var output = "Currently Selected: " + name
+                var output = "Selected: " + name
                 console.log(output);
                 document.getElementById("selected").innerHTML = output;
 
