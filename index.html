@@ -181,7 +181,7 @@
                 table = $('#supportTable').DataTable({
                     ajax: {
                         type: "GET",
-                        url: "http://dragonsidesynergy-env.eba-rfrgjick.ap-southeast-2.elasticbeanstalk.com/currentadc",
+                        url: "http://localhost:8080/currentadc",
                         dataSrc: "supports",
                     },
                     columns: [
@@ -234,7 +234,7 @@
                 var info = { ChampID: id };
                 $.ajax({
                     type: "POST",
-                    url: "http://dragonsidesynergy-env.eba-rfrgjick.ap-southeast-2.elasticbeanstalk.com/adcid",
+                    url: "http://localhost:8080/adcid",
                     data: JSON.stringify(info),
                     contentType: "application/json;",
                     success: function (data) {
@@ -250,7 +250,7 @@
                 $.ajax({
 
                     type: "GET",
-                    url: "http://dragonsidesynergy-env.eba-rfrgjick.ap-southeast-2.elasticbeanstalk.com/currentadc",
+                    url: "http://localhost:8080/currentadc",
                     success: function (data) {
                         var response = JSON.parse(data);
                         var supports = response.supports;
@@ -279,7 +279,7 @@
                 document.getElementById("supportTable").style.visibility = "hidden"
                 $.ajax({
                     type: "GET",
-                    url: "http://dragonsidesynergy-env.eba-rfrgjick.ap-southeast-2.elasticbeanstalk.com/adcnames",
+                    url: "http://localhost:8080/adcnames",
                     success: function (data) {
                         console.log(data);
                         var response = JSON.parse(data);
