@@ -113,7 +113,7 @@ function getADCnames() {
     document.getElementById("supportTable").style.visibility = "hidden"
     $.ajax({
         type: "GET",
-        url: "http://dragonsidedata-env-1.eba-mkdkawv2.ap-southeast-2.elasticbeanstalk.com/adcnames",
+        url: "http://dragonsidedata-env-2.eba-mkdkawv2.ap-southeast-2.elasticbeanstalk.com/adcnames",
         success: function (data) {
             //Parse request data
             console.log(data);
