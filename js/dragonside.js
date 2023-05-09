@@ -13,7 +13,7 @@ function setTable() {
     table = $('#supportTable').DataTable({
         ajax: {
             type: "GET",
-            url: "http://dragonsidedata-env-1.eba-mkdkawv2.ap-southeast-2.elasticbeanstalk.com/currentadc",
+            url: "http://dragonsidedata-env-2.eba-mkdkawv2.ap-southeast-2.elasticbeanstalk.com/currentadc",
             dataSrc: "supports",
         },
         columns: [
@@ -64,7 +64,7 @@ function sendADCID(id) {
     var info = { ChampID: id };
     $.ajax({
         type: "POST",
-        url: "http://dragonsidedata-env-1.eba-mkdkawv2.ap-southeast-2.elasticbeanstalk.com/adcid",
+        url: "http://dragonsidedata-env-2.eba-mkdkawv2.ap-southeast-2.elasticbeanstalk.com/adcid",
         data: JSON.stringify(info),
         contentType: "application/json;",
         success: function (data) {
@@ -78,7 +78,7 @@ function sendADCID(id) {
 function getADC() {
     $.ajax({
         type: "GET",
-        url: "http://dragonsidedata-env-1.eba-mkdkawv2.ap-southeast-2.elasticbeanstalk.com/currentadc",
+        url: "http://dragonsidedata-env-2.eba-mkdkawv2.ap-southeast-2.elasticbeanstalk.com/currentadc",
         success: function (data) {
             var response = JSON.parse(data);
             var supports = response.supports;
