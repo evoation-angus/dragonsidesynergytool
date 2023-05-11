@@ -50,12 +50,12 @@ function championSelect(element) {
     }
     previousElement = element;
     var name = element.name;
-    console.log(name);
+    //console.log(name);
     var id = element.id;
     element.style.boxShadow = "0 0 0 3px #C9AA71";
     sendADCID(id);
     var output = "Selected: " + name
-    console.log(output);
+    //console.log(output);
     document.getElementById("selected").innerHTML = output;
 }
 
@@ -68,11 +68,11 @@ function sendADCID(id) {
         data: JSON.stringify(info),
         contentType: "application/json;",
         success: function (data) {
-            console.log("Finished sending ID: " + id)
+            //console.log("Finished sending ID: " + id)
             setTable()
         }
     })
-    console.log("Starting to get ADC")
+    //console.log("Starting to get ADC")
 }
 
 function getADC() {
@@ -84,7 +84,7 @@ function getADC() {
             var supports = response.supports;
             var json = '{"data" : ';
             json += JSON.stringify(supports) + "}";
-            console.log(json);
+            //console.log(json);
         }
     })
 }
@@ -116,7 +116,7 @@ function getADCnames() {
         url: "http://dragonsidedata-env-1.eba-mkdkawv2.ap-southeast-2.elasticbeanstalk.com/adcnames",
         success: function (data) {
             //Parse request data
-            console.log(data);
+            //console.log(data);
             var response = JSON.parse(data);
             var list = response;
             var adcs = sortNames(list);
