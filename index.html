@@ -9,8 +9,8 @@
     <link rel="stylesheet" type="text/css" href="DataTables-1.11.3/css/jquery.dataTables.css" />
     <link rel="stylesheet" type="text/css" href="DataTables-1.11.3/css/responsive.dataTables.css" />
     <link rel="stylesheet" type="text/css" href="stylesheet.css" />
-    
-    
+
+
     <title>Dragonside</title>
 </head>
 
@@ -28,7 +28,15 @@
             <div class="col-6" id="leftCol">
                 <div class="row" style="background-color: #092649;  margin-bottom: 10px;">
                     <div class="col">
-                        <h3>Common ADCs:</h3>
+
+                        <div class="row">
+                            <div class="col-sm">
+                                <h3>ADC Search:</h3>
+                            </div>
+                            <div class="col-sm" id="the-basics">
+                                <input class="typeahead" id="searchInput" type="text" placeholder="Champion name">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -36,79 +44,79 @@
 
                         <div class="row row-cols-2 row-cols-xs-2 row-cols-sm-3 row-cols-md-3 row-cols-lg-5">
                             <div class="col-sm">
-                                <img src="images/Aphelios.png" alt="" class="img-fluid champImg"
-                                    onclick="championSelect(this)" id="523" name="Aphelios">
+                                <img src="images/Aphelios.png" alt="" class="img-fluid champImg champion"
+                                    onclick="championSelect(this.id)" id="523" name="Aphelios">
                                 <p>Aphelios</p>
                             </div>
                             <div class="col-sm">
-                                <img src="images/Ashe.png" alt="" class="img-fluid" onclick="championSelect(this)"
+                                <img src="images/Ashe.png" alt="" class="img-fluid champion" onclick="championSelect(this.id)"
                                     id="22" name="Ashe">
                                 <p>Ashe</p>
                             </div>
                             <div class="col-sm">
-                                <img src="images/Caitlyn.png" alt="" class="img-fluid" onclick="championSelect(this)"
+                                <img src="images/Caitlyn.png" alt="" class="img-fluid champion" onclick="championSelect(this.id)"
                                     id="51" name="Caitlyn">
                                 <p>Caitlyn</p>
                             </div>
                             <div class="col-sm">
-                                <img src="images/Draven.png" alt="" class="img-fluid" onclick="championSelect(this)"
+                                <img src="images/Draven.png" alt="" class="img-fluid champion" onclick="championSelect(this.id)"
                                     id="119" name="Draven">
                                 <p>Draven</p>
                             </div>
                             <div class="col-sm">
-                                <img src="images/Ezreal.png" alt="" class="img-fluid" onclick="championSelect(this)"
+                                <img src="images/Ezreal.png" alt="" class="img-fluid champion" onclick="championSelect(this.id)"
                                     id="81" name="Ezreal">
                                 <p>Ezreal</p>
                             </div>
 
 
                             <div class="col-sm">
-                                <img src="images/Jhin.png" alt="" class="img-fluid" onclick="championSelect(this)"
+                                <img src="images/Jhin.png" alt="" class="img-fluid champion" onclick="championSelect(this.id)"
                                     id="202" name="Jhin">
                                 <p>Jhin</p>
                             </div>
                             <div class="col-sm">
-                                <img src="images/Jinx.png" alt="" class="img-fluid" onclick="championSelect(this)"
+                                <img src="images/Jinx.png" alt="" class="img-fluid champion" onclick="championSelect(this.id)"
                                     id="222" name="Jinx">
                                 <p>Jinx</p>
                             </div>
                             <div class="col-sm">
-                                <img src="images/Kaisa.png" alt="" class="img-fluid" onclick="championSelect(this)"
+                                <img src="images/Kaisa.png" alt="" class="img-fluid champion" onclick="championSelect(this.id)"
                                     id="145" name="Kai'Sa">
                                 <p>Kai'Sa</p>
                             </div>
                             <div class="col-sm">
-                                <img src="images/KogMaw.png" alt="" class="img-fluid" onclick="championSelect(this)"
+                                <img src="images/KogMaw.png" alt="" class="img-fluid champion" onclick="championSelect(this.id)"
                                     id="96" name="Kog'Maw">
                                 <p>Kog'Maw</p>
                             </div>
                             <div class="col-sm">
-                                <img src="images/Lucian.png" alt="" class="img-fluid" onclick="championSelect(this)"
+                                <img src="images/Lucian.png" alt="" class="img-fluid champion" onclick="championSelect(this.id)"
                                     id="236" name="Lucian">
                                 <p>Lucian</p>
                             </div>
                             <div class="col-sm">
-                                <img src="images/MissFortune.png" alt="" class="img-fluid"
-                                    onclick="championSelect(this)" id="21" name="Miss Fortune">
+                                <img src="images/MissFortune.png" alt="" class="img-fluid champion"
+                                    onclick="championSelect(this.id)" id="21" name="Miss Fortune">
                                 <p>Miss Fortune</p>
                             </div>
                             <div class="col-sm">
-                                <img src="images/Samira.png" alt="" class="img-fluid" onclick="championSelect(this)"
+                                <img src="images/Samira.png" alt="" class="img-fluid champion" onclick="championSelect(this.id)"
                                     id="360" name="Samira">
                                 <p>Samira</p>
                             </div>
                             <div class="col-sm">
-                                <img src="images/Twitch.png" alt="" class="img-fluid" onclick="championSelect(this)"
+                                <img src="images/Twitch.png" alt="" class="img-fluid champion" onclick="championSelect(this.id)"
                                     id="29" name="Twitch">
                                 <p>Twitch</p>
                             </div>
                             <div class="col-sm">
-                                <img src="images/Xayah.png" alt="" class="img-fluid" onclick="championSelect(this)"
+                                <img src="images/Xayah.png" alt="" class="img-fluid champion" onclick="championSelect(this.id)"
                                     id="498" name="Xayah">
                                 <p>Xayah</p>
                             </div>
                             <div class="col-sm">
-                                <img src="images/Zeri.png" alt="" class="img-fluid" onclick="championSelect(this)"
+                                <img src="images/Zeri.png" alt="" class="img-fluid champion" onclick="championSelect(this.id)"
                                     id="221" name="Zeri">
                                 <p>Zeri</p>
                             </div>
@@ -164,9 +172,12 @@
                 </table>
             </div>
         </div>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" crossorigin="anonymous"></script>
+        <script src="js/typeahead.bundle.js"></script>
         <script type="text/javascript" src="js/dragonside.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
         <script type="text/javascript" src="DataTables-1.11.3/js/jquery.dataTables.js"></script>
         <script type="text/javascript" src="DataTables-1.11.3/js/dataTables.responsive.js"></script>
+
 </body>

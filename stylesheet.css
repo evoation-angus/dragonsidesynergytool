@@ -12,6 +12,44 @@ body{
     border-bottom: #060E1F solid 16px;
     border-right: #060E1F solid 10px;
 }
+.red-text{
+    color: red;
+}
+.selected-adc{
+    box-shadow: 0 0 0 3px #C9AA71;
+}
+.twitter-typeahead{
+    height: 80%;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+.tt-input{
+    color: white;
+    background-color: #060E1F !important;
+    border-color: rgb(201, 170, 113);
+    border-radius: 20px;
+    padding-left: 10px;
+    width: 100%;
+}
+
+.tt-hint{
+    background: none 0% 0% / auto repeat scroll padding-box border-box #060E1F !important;
+    border-radius: 20px;
+    width: 100%;
+}
+.typeahead {
+    height:100%;
+    background-color: #060E1F;
+    border-color: rgb(201, 170, 113);
+    border-radius: 20px;
+    padding-left: 10px;
+}
+.tt-open{
+    background-color: #060E1F;
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #C9AA71;
+}
 .card{
     background-color: #092949;
 }
@@ -48,6 +86,14 @@ label{
 .table td{
     border-top-color:#C9AA71 ;
 }
+.paginate_button.current{
+    background: #C9AA71 !important;
+}
+.paginate_button{
+    background: #092649 !important;
+    border-color: #C9AA71 !important;
+}
+
 .dataTables_wrapper .dataTables_paginate .paginate_button {
     color: antiquewhite!important;
 }
